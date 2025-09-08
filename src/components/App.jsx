@@ -22,6 +22,7 @@ export default function App() {
   const [didInitVideo, setDidInitVideo] = useState(false)
   const [focusedId, setFocusedId] = useState(null)
   const [uploadedImage, setUploadedImage] = useState(null)
+  const [apiKey, setApiKey] = useState('')
   const fileInputRef = useRef(null)
 
   const handleImageUpload = e => {
@@ -33,7 +34,7 @@ export default function App() {
       setUploadedImage(e.target.result)
       setVideoActive(true)
       setDidInitVideo(true)
-      generateAllModesFromUpload(e.target.result)
+      generateAllModesFromUpload(e.target.result, apiKey)
     }
     reader.readAsDataURL(file)
   }
@@ -78,6 +79,15 @@ export default function App() {
           <div className="startButton">
             <h1>📸 MyArtTOYs</h1>
             <p className="tagline">Turn 2D to 3D-printer-ready!</p>
+            <div className="api-key-input">
+              <input
+                type="text"
+                placeholder="Enter your Google AI API Key"
+                value={apiKey}
+                onChange={(e) => setApiKey(e.target.value)}
+                className="api-input"
+              />
+            </div>
             <div className="demo-images">
               <img  src="/original.jpeg" alt="Original 2D image" className="demo-image" />
               <span className="arrow"> ➡️ </span>

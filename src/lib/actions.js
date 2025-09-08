@@ -24,7 +24,7 @@ export const init = () => {
   })
 }
 
-export const generateAllModesFromUpload = async b64 => {
+export const generateAllModesFromUpload = async (b64, apiKey) => {
   // Clear previous results
   const oldPhotos = get().photos
   for (const photo of oldPhotos) {
@@ -58,7 +58,8 @@ export const generateAllModesFromUpload = async b64 => {
       const result = await gen({
         model,
         prompt,
-        inputFile: b64
+        inputFile: b64,
+        apiKey
       })
 
       if (result) {

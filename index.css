@@ -485,3 +485,29 @@ main {
   align-items: center;
   margin-top:-100px;
 }
+
+.api-key-input {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+.api-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.api-input:focus {
+  border-color: #1e88e5;
+  outline: none;
+}
+
+.api-input::placeholder {
+  color: #666;
+}
