@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
 */
-import {useState, useRef} from 'react'
+import React, {useState, useRef} from 'react'
 import c from 'clsx'
 import {
   deletePhoto,
@@ -78,6 +78,11 @@ export default function App() {
           <div className="startButton">
             <h1>📸 MyArtTOYs</h1>
             <p className="tagline">Turn 2D to 3D-printer-ready!</p>
+            <div className="demo-images">
+              <img  src="/original.jpeg" alt="Original 2D image" className="demo-image" />
+              <span className="arrow"> ➡️ </span>
+              <img  src="/3d-generated.gif" alt="Generated 3D views" className="demo-image" />
+            </div>
             <div className="start-options">
               <button
                 onClick={() => fileInputRef.current?.click()}

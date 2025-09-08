@@ -474,3 +474,14 @@ main {
   color: #777;
   margin-top: 5px;
 }
+
+.demo-image {
+  max-width: 150px;
+}
+
+.arrow {
+  padding: 5px;
+  /*display: flex;*/
+  align-items: center;
+  margin-top:-100px;
+}

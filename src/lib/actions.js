@@ -165,7 +165,7 @@ export const makeGif = async () => {
         imageData.outputs[photo.id],
         gifSize
       )
-      addFrameToGif(gif, outputImageData, gifSize, 100)
+      addFrameToGif(gif, outputImageData, gifSize, 400)
     }
 
     gif.finish()
